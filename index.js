@@ -26,7 +26,7 @@ const jokeBox = document.querySelector(".joke-box");
 const allKeys = document.querySelectorAll(".key");
 
 let firstKeyName = "";
-counter = 0;
+let counter = 0;
 
 const changeNotenamesOnPage = {
   //change of name needed because it's not possible to name audio file i.e "C#".
@@ -119,7 +119,6 @@ function secondKeyAudioText(secondKeyName) {
   audio.play();
 
   checkResult(firstKeyValue.innerHTML, secondKeyValue.innerHTML);
-  console.log(firstKeyValue.innerHTML, secondKeyValue.innerHTML);
 
   counter = 0;
 }
@@ -179,7 +178,7 @@ function howManyMiliSecJokeboxVisible(howManyMiliSec) {
   }, howManyMiliSec);
 }
 
-//EVENT LISTENERS
+//Event Listeners
 
 clear.addEventListener("click", () => {
   clearMe();

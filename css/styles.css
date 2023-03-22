@@ -14,7 +14,8 @@
 }
 
 body {
-  background-color: var(--bg-color);
+  margin-inline: 8px;
+  background: var(--bg-color);
   background-image: linear-gradient(
     0deg,
     rgb(1, 19, 32) 0%,
@@ -23,34 +24,32 @@ body {
 }
 
 .wrapper {
-  margin: 0 auto;
   min-height: 100vh;
+  margin: 0 auto;
   max-width: var(--keyboard-width);
   font-family: "Roboto", sans-serif;
 }
 
-.menu {
+.header {
   text-align: center;
+  margin-bottom: min(5rem, 40px);
 }
 
-.menu h1 {
+.header h1 {
   font-family: "Antonio", sans-serif;
   font-size: 4rem;
   line-height: 1.6;
-  color: var(--text-color-secondary);
   transition: text-shadow 0.125s ease-in-out;
+  white-space: nowrap;
+  color: var(--text-color-secondary);
 }
 
-.menu h1:hover {
+.header h1:hover {
   text-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
     0 0 100px #03e9f4;
 }
 
 /* RESULTS SECTION */
-
-.results {
-  padding: 1rem;
-}
 
 .results-div {
   display: grid;
@@ -59,8 +58,9 @@ body {
 }
 
 .results-description {
+  line-height: 1.4;
+  white-space: nowrap;
   color: var(--text-color-primary);
-  line-height: 1.8;
 }
 
 .results-value {
@@ -71,13 +71,13 @@ body {
 #interval {
   text-decoration: underline;
   text-underline-offset: 6px;
+  white-space: nowrap;
 }
 
 /*JOKE AND FACEPALM */
+
 .joke-box {
   visibility: hidden;
-  background-color: rgba(0, 0, 0, 0.9);
-  color: var(--text-color-primary);
   position: absolute;
   top: 0;
   right: 0;
@@ -90,40 +90,48 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--text-color-primary);
+  background: rgba(0, 0, 0, 0.9);
 }
 
 .facepalm-box {
   position: absolute;
-  top: 20rem;
-  right: 10rem;
-  font-size: 12rem;
+  top: 10rem;
+  right: 5rem;
+  font-size: 8rem;
 }
 
 .bottom-wrapper {
-  margin-top: 2rem;
   display: flex;
   justify-content: space-between;
+  margin-top: 2rem;
 }
 
 .clear,
 .joke,
 .real-joke {
-  color: var(--text-color-primary);
-
   cursor: pointer;
+  padding: 3px 6px;
+  border-radius: 3px;
+  font-weight: 400;
+  transition: all 70ms ease-in-out;
+  color: black;
+  background: white;
 }
 
-.clear:hover {
-  color: red;
+.clear:hover,
+.joke:hover,
+.real-joke:hover {
+  background: var(--text-color-secondary);
 }
 
 /* KEYS */
 
 .keys {
+  display: flex;
   width: var(--keyboard-width);
   height: calc(var(--keyboard-width) / 1.8);
   margin: 2rem auto;
-  display: flex;
   cursor: pointer;
   position: relative;
 }
@@ -147,20 +155,39 @@ body {
 }
 
 .black {
-  background-color: black;
   width: 17%;
   height: 61%;
   z-index: 2;
   margin-right: -3.8%;
   margin-left: -5%;
+  background: black;
 }
 .white {
-  background-color: white;
   width: 25%;
   height: 100%;
   border: 1px solid black;
+  background: white;
 }
 .f,
 .c-2 {
   border-left: none;
+}
+
+@media screen and (max-width: 650px) {
+  header h1 {
+    line-height: 1;
+    font-size: 2.5rem;
+  }
+  .keys {
+    width: 100%;
+    height: 35vh;
+  }
+  .facepalm-box {
+    top: 8rem;
+    right: 2rem;
+    font-size: 4rem;
+  }
+  .bottom-wrapper div p {
+    font-size: 0.8rem;
+  }
 }
