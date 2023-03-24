@@ -99,12 +99,7 @@ function checkResult(first, second) {
 //First Key Clicked:
 
 function firstKeyAudioText(firstKeyName) {
-  // let audio = new Audio("../Assets/" + firstKeyName + ".mp3");
-  let audio = new Audio(
-    "https://github.com/marsobpro/intervals/blob/main/Assets/" +
-      firstKeyName +
-      ".mp3"
-  );
+  let audio = new Audio("../Assets/" + firstKeyName + ".mp3");
 
   interval.innerHTML = "";
   secondKeyValue.innerHTML = "";
@@ -117,13 +112,7 @@ function firstKeyAudioText(firstKeyName) {
 //Second Key Clicked:
 
 function secondKeyAudioText(secondKeyName) {
-  let audio = new Audio(
-    "https://github.com/marsobpro/intervals/blob/main/Assets/" +
-      secondKeyName +
-      ".mp3"
-  );
-
-  // let audio = new Audio("../Assets/" + secondKeyName + ".mp3");
+  let audio = new Audio("../Assets/" + secondKeyName + ".mp3");
 
   secondKeyValue.innerHTML = changeNotenamesOnPage[secondKeyName];
   counter++;
