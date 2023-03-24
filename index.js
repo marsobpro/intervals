@@ -99,7 +99,12 @@ function checkResult(first, second) {
 //First Key Clicked:
 
 function firstKeyAudioText(firstKeyName) {
-  let audio = new Audio("../Assets/" + firstKeyName + ".mp3");
+  // let audio = new Audio("../Assets/" + firstKeyName + ".mp3");
+  let audio = new Audio(
+    "https://github.com/marsobpro/intervals/blob/main/Assets/" +
+      firstKeyName +
+      ".mp3"
+  );
 
   interval.innerHTML = "";
   secondKeyValue.innerHTML = "";
@@ -112,7 +117,13 @@ function firstKeyAudioText(firstKeyName) {
 //Second Key Clicked:
 
 function secondKeyAudioText(secondKeyName) {
-  let audio = new Audio("../Assets/" + secondKeyName + ".mp3");
+  let audio = new Audio(
+    "https://github.com/marsobpro/intervals/blob/main/Assets/" +
+      secondKeyName +
+      ".mp3"
+  );
+
+  // let audio = new Audio("../Assets/" + secondKeyName + ".mp3");
 
   secondKeyValue.innerHTML = changeNotenamesOnPage[secondKeyName];
   counter++;
@@ -197,12 +208,18 @@ jokeBox.addEventListener("click", () => {
 });
 
 for (let key of allKeys) {
-  key.addEventListener("click", (e) => {
+  key.addEventListener("mousedown", (e) => {
     const thisKeyName = e.target.classList[0]; // first class of each key is the same as key name
     if (counter === 0) {
       firstKeyAudioText(thisKeyName);
     } else {
       secondKeyAudioText(thisKeyName);
     }
+
+    const thisKey = e.target;
+    thisKey.classList.add("key-pressed");
+  });
+  key.addEventListener("mouseup", (e) => {
+    key.classList.remove("key-pressed");
   });
 }
