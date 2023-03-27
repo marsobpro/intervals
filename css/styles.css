@@ -1,7 +1,7 @@
 :root {
   --text-color-primary: #fff4cf;
   --text-color-secondary: #ffb200;
-  --bg-color: #277bc0;
+  --bg-color: #1d394d;
   --keyboard-width: 40rem;
 }
 
@@ -15,12 +15,7 @@
 
 body {
   margin-inline: 8px;
-  background: var(--bg-color);
-  background-image: linear-gradient(
-    0deg,
-    rgb(1, 19, 32) 0%,
-    rgba(1, 19, 32, 0.582) 97%
-  );
+  background-color: var(--bg-color);
 }
 
 .wrapper {
@@ -105,7 +100,7 @@ body {
 .bottom-wrapper {
   display: flex;
   justify-content: space-between;
-  margin-top: 8rem;
+  margin-top: 4rem;
   margin-bottom: 2rem;
 }
 
