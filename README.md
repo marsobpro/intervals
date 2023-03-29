@@ -1,7 +1,7 @@
 
 # Gimme The Interval!
-> 🎹 Gimme The Interval! is a tool for checking the intervals between two sounds. It also features Chuck Norris armed with hilarious jokes to keep you from being bored while you check them 🤌
-> Live demo [_here_](https://keen-puffpuff-b2dc5e.netlify.app/).
+🎹 Gimme The Interval! is a tool for checking the intervals between two sounds. It also features Chuck Norris armed with hilarious jokes to keep you from being bored while you check them 🤌
+Live demo [_here_](https://keen-puffpuff-b2dc5e.netlify.app/).
 
 ## Table of Contents
 * [General Info](#general-information)
@@ -76,7 +76,7 @@ As part of further work on the application, I would like to add or improve the f
 
 
 ## Acknowledgements
-I created the piano sounds using Audacity and MuseScore applications.
+I created the piano sounds using Audacity and MuseScore.
 
 Chuck norris jokes - 
 **https://api.chucknorris.io/**
