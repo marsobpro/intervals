@@ -1,7 +1,8 @@
 
 # Gimme The Interval!
 🎹 Gimme The Interval! is a tool for checking the intervals between two sounds. It also features Chuck Norris armed with hilarious jokes to keep you from being bored while you check them 🤌
-Live demo [_here_](https://keen-puffpuff-b2dc5e.netlify.app/).
+Live demo [_here_](https://keen-puffpuff-b2dc5e.netlify.app/).  
+*(The jokes aren't my own; they come from api.chucknorris.io)*
 
 ## Table of Contents
 * [General Info](#general-information)
